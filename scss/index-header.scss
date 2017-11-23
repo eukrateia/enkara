@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.index-ui-back {
+  min-height:400px;
+}
+.block-parallax-1 {
+    overflow: hidden;
+    position: relative;
+}
+.block-parallax-1 .parallax-bg {
+    background-attachment: fixed;
+    background-image: url('/images/colorful-bubble-with-reflection-of-prague-buildings-picjumbo-com.jpg');
+    background-position: 0px 0px;
+    background-repeat: repeat;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    //min-width: 1170px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+.block-parallax-1 .md-box {
+    padding: 200px 0 200px;
+    background: rgba(0, 0, 0, 0.75);
+    position: relative;
+    height: 100%;
+    text-align: center;
+}
+.block-parallax-1 .md-box h1 {
+    color: #fff;
+}
+
+.block-parallax-2 .parallax-bg {
+	background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_z73DvFVC1ek9ZsGdCpvpDW_AwRqOWgG6IP2wOXrVibxz_EDV');
+}
+
+
+
+h2 {
+    color: #555;
+    text-align: center;
+    padding: 25px 0;
+    margin: 0;
+}

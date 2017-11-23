@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='/javascript/jquery-3.2.1.min.js')
+    script(src='/javascript/main.js')
+
+
+  body
+
+    block navBar
+      div.navBar
+        div.nbMenu
+          div.icoBtn
+            i.fa.fa-bars
+        div.signUp.btn.green
+          | Get Started
+        div.login.btn.blue
+          | Login
+
+    block content
+
+
+    script(src='http://localhost:35729/livereload.js')

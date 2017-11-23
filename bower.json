@@ -1,0 +1,21 @@
+{
+  "name": "enkara",
+  "description": "",
+  "main": "",
+  "authors": [
+    "David Demers <dave.demers@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "css-calc-mixin": "*",
+    "font-awesome": "^4.7.0"
+  }
+}

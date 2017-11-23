@@ -1,0 +1,73 @@
+@import "css-calc-mixin";
+@import "font-awesome";
+@import "color-palette";
+@import "index-header";
+
+.icoBtn {
+  float: left;
+  font-size: 20px;
+  margin: auto;
+  padding: 3px;
+  border: 1px;
+  border-radius: 3px;
+  border-color: #ffffff;
+}
+
+.btn {
+  padding: 5px 10px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  line-height: 17px;
+  &.green {
+    background-color: $green-hex-2 !important;
+    &:hover {
+      background-color: $green-hex-3 !important;
+      cursor: pointer;
+    }
+  }
+  &.blue {
+    background-color: $blue-hex-3 !important;
+    &:hover {
+      background-color: $blue-hex-4 !important;
+      cursor: pointer;
+    }
+  }
+}
+
+.navBar {
+  top: 0;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  background-color: #000000;
+  .nbMenu {
+    color: #ffffff;
+  }
+  .signUp {
+    float: right;
+    margin: 0 20px 0 0;
+  }
+  .login {
+    float: right;
+    margin: 0 10px 0 0;
+  }
+}
+
+body {
+  margin: 0px;
+  background-color: #ffffff;
+  .routeContainer {
+    margin: 50px 0 0 0;
+  }
+}
+
+/*.indexTitleHeader {
+  background-image: /images/
+  .qotd {
+    float: right;
+  }
+}*/
