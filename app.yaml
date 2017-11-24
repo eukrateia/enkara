@@ -4,4 +4,4 @@ runtime: nodejs
 # Prevents locally installed Bower dependencies
 # from being copied into the Docker image
 skip_files:
-   - ^(.*/)?.*/bower_components/.*$
+  - ^(.*/)?.*/bower_components/.*$
