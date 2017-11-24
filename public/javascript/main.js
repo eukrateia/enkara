@@ -1,9 +1,27 @@
-var kep = {
+var enk = {
   init: function() {
-    console.log('kep.start');
+    console.log('enk.start');
+
+    enk.load.setEvents();
+
+
+
+
+  },
+  load: {
+    setEvents: function() {
+
+      $('.signUp').on('click', function() {
+        alert('Sign up feature coming soon.');
+      });
+
+      $('.login').on('click', function() {
+        alert('Login is not setup!!!');
+      });
+    }
   }
 };
 
 $(document).ready(function(){
-  kep.init();
+  enk.init();
 });
