@@ -12,9 +12,12 @@
 }
 .block-parallax-1 .parallax-bg {
     //background-attachment: fixed;
-    background-image: url('/images/colorful-bubble-with-reflection-of-prague-buildings-picjumbo-com.jpg');
-    background-position: 0px 0px;
-    background-repeat: repeat;
+    //background-image: url('/images/colorful-bubble-with-reflection-of-prague-buildings-picjumbo-com.jpg');
+    background-image: url('/images/beautiful-sunset-over-the-yellow-rapeseed-field-picjumbo-com.jpg');
+    //background-image: url('/images/young-couple-enjoys-walking-in-chateau-garden-followmeto-picjumbo-com.jpg');
+    background-position: bottom left;
+    background-position: center;
+    //background-repeat: repeat;
     height: 100%;
     position: absolute;
     width: 100%;
@@ -24,10 +27,11 @@
     background-size: cover;
 }
 .block-parallax-1 .md-box {
-    padding: 200px 0 200px;
-    background: rgba(0, 0, 0, 0.75);
+    //padding: 200px 0 200px;
+    background: rgba(0, 0, 0, 0);
     position: relative;
     height: 100%;
+    min-height: 600px;
     text-align: center;
 }
 .block-parallax-1 .md-box h1 {
