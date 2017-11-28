@@ -10,6 +10,7 @@ var enk = {
   },
   load: {
     setEvents: function() {
+      console.log('enk.load.setEvents()').
 /*
       $('.formFrame .iframe').ready(function() {
         var iHeight = $( '.iframe' ).contents().find( 'body' ).height();
