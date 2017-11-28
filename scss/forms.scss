@@ -138,8 +138,8 @@ tr:hover .cut { opacity: 1; }
 
 @media print {
 	* { -webkit-print-color-adjust: exact; }
-	html { background: none; padding: 0; }
-	body { box-shadow: none; margin: 0; }
+	html { height:100%; background: none; padding: 0; }
+	body { height:100%; box-shadow: none; margin: 0; }
 	span:empty { display: none; }
 	.add, .cut { display: none; }
 }
