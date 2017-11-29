@@ -1,0 +1,73 @@
+body {
+  margin: 0px;
+  background-color: #ffffff;
+  min-width: 640px;
+  .routeContainer {
+    margin: 50px 0 0 0;
+  }
+}
+
+.icoBtn {
+  float: left;
+  font-size: 20px;
+  margin: auto;
+  padding: 3px;
+  border: 1px;
+  border-radius: 3px;
+  border-color: #ffffff;
+}
+
+.btn {
+  padding: 5px 10px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  line-height: 17px;
+  &.green {
+    background-color: $green-hex-2 !important;
+    &:hover {
+      background-color: $green-hex-3 !important;
+      cursor: pointer;
+    }
+  }
+  &.blue {
+    background-color: $blue-hex-3 !important;
+    &:hover {
+      background-color: $blue-hex-4 !important;
+      cursor: pointer;
+    }
+  }
+}
+
+.navBar {
+  top: 0;
+  padding: 10px;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  background-color: #000000;
+  border-width: 1px;
+  border-bottom: 1px #fff solid;
+  .nbMenu {
+    color: #fff;
+  }
+  .nbTitle {
+    color: #fff;
+    float: left;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    margin: auto;
+    padding: 2px 0 0 10px;
+  }
+  .signUp {
+    float: right;
+    margin: 0 20px 0 0;
+  }
+  .login {
+    float: right;
+    margin: 0 10px 0 0;
+  }
+}
