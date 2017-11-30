@@ -3,7 +3,8 @@ module.exports = function(grunt) {
     sass:{
       dist:{
         files:{
-          'public/stylesheets/style.css': 'scss/style.scss'
+          'public/stylesheets/style.css': 'scss/style.scss',
+          'public/tc-app/style.css': 'public/tc-app/style.scss'
         }
       },
       options: {
@@ -15,7 +16,8 @@ module.exports = function(grunt) {
     },
     watch: {
       source: {
-        files: ['scss/*.scss', 'views/**/*.pug'],
+        files: ['scss/*.scss', 'views/**/*.pug',
+          'public/tc-app/*.scss'],
         tasks: ['sass'],
         options: {
           livereload: true

@@ -1,3 +1,4 @@
 node_modules
 public/stylesheets/*.css
 bower_components
+public/tc-app
