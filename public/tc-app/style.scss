@@ -1,4 +1,34 @@
-body {
+$darkblue: #015B76;
+$lightblue: #206EAB;
+
+.printablePreview {
   background-image: url('bg1.png');
-  width: 100%;
+  background-size: 8.5in;
+  background-repeat: no-repeat;
+  width: 8.5in;
+  height: 11in;
+  .printZone {
+    width: 8.0in;
+    height: 10.5in;
+    margin: auto;
+    .printContent {
+      width: 760px;
+      height: 100%;
+      margin-left: 6px;
+      background-color: rgba(0, 0, 255, 0.1);
+    }
+  }
+}
+
+.printTopLogos {
+  background-color: rgba(255, 0, 0, 0.5);
+  height: 79px;
+  .tcLogoSmall {
+    float: left;
+    padding: 25px 0 0 18px;
+  }
+  .abLogoSmall {
+    float: right;
+    padding: 13px 22px 0 0;
+  }
 }
