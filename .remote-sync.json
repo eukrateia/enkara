@@ -9,9 +9,9 @@
     ".git/**"
   ],
   "username": "david",
-  "keyfile": "C:\\DGDesign\\VM's\\id_rsa_david.ppk",
-  "passphrase": "Another1one",
   "watch": [],
   "transport": "scp",
-  "target": "/home/david/code/enkara/"
+  "target": "/home/david/code/enkara/",
+  "keyfile": "C:\\DGDesign\\VM's\\id_rsa_root.ppk",
+  "passphrase": "Another1one"
 }
