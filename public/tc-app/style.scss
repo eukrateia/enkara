@@ -8,7 +8,7 @@ $hltblue: #E5EEF1;
 html, body {
   margin: 0 !important;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
+  font-size: 11px;
   color: $darkblue;
 }
 
@@ -45,6 +45,18 @@ html, body {
   border-radius: 10px;
 }
 
+.btmBorder {
+  border-bottom: 1px solid $lightblue;
+}
+
+.btmBorderBig {
+  border-bottom: 2px solid $lightblue;
+}
+
+.btmBorderBlack {
+  border-bottom: 2px solid #000;
+}
+
 .greaterThan {
   font-size: 22px;
   float: left;
@@ -56,6 +68,7 @@ html, body {
 
 .inputGroup {
   box-sizing: border-box;
+  height: 27px;
   .gs50 {
     width: 50%;
   }
@@ -67,17 +80,19 @@ html, body {
 }
 
 .inputBox {
+  float: right;
   box-sizing: border-box;
   height: 20px;
   overflow: hidden;
-  float: left;
   min-width: 20px;
-  font-size: 14px;
-  line-height: 12px;
+  font-size: 12px;
+  line-height: 14px;
   color: #000;
-  padding: 5px 5px;
+  padding: 3px 5px;
   margin-top: -3px;
   background-color: $hltblue;
+  white-space: nowrap;
+  display: inline-block;
   &:focus{
     border: 1px 1px 1px 3px solid $lightblue;
   }
@@ -207,7 +222,7 @@ html, body {
   position: absolute;
   top: 198px;
   width: 750px;
-  height: 256px;
+  height: 255px;
   .titleCoInfo {
     display: block;
     box-sizing: border-box;
@@ -216,120 +231,604 @@ html, body {
     width: 100%;
     border-bottom: 2px solid $darkblue;
     height: 27px;
-    padding: 5px 0 0 0;
+    padding: 4px 0 0 0;
   }
   .leftLegal {
     float: left;
     border-right: 3px solid $darkblue;
-    width: 430px;
+    width: 410px;
     height: 230px;
-    .inputGroup {
-      height: 20px;
+    box-sizing: border-box;
+    .grpLegalLabels {
+      height: 15px;
+      padding: 0 0 0 5px;
+      .lblLegalName {
+        width: 210px;
+        height: 12px;
+      }
+      .lblDBA {
+        width: 180px;
+        height: 12px;
+      }
     }
-    .btmBorder {
-      border-bottom: 1px solid $lightblue;
+    .grpLegalInputs {
+      height: 40px;
+      .inputLegalName {
+        width: 205px;
+        margin: 0 3px 0 5px;
+        height: 36px;
+        float: left;
+      }
+      .inputDBA {
+        width: 187px;
+        margin: 0 0 0 2px;
+        height: 36px;
+        float: left;
+      }
     }
-    .btmBorderBig {
-      border-bottom: 2px solid $lightblue;
+    .grpTaxInfo {
+      padding: 6px 0 0 5px;
+      .grpTaxID {
+        width: 205px;
+        float: left;
+        .lblTaxID {
+          height: 12px;
+        }
+        .inputTaxID {
+          width: 150px;
+          float: right;
+        }
+      }
+      .grpStateOfInc {
+        width: 192px;
+        float: right;
+        padding: 0 5px 0 0;
+        box-sizing: border-box;
+        .lblStateOfInc {
+          height: 12px;
+          float: left;
+        }
+        .inputStateOfInc {
+          width: 60px;
+          float: right;
+        }
+      }
     }
-    .lblLegalName {
-      width: 210px;
-      height: 12px;
+    .grpAddress {
+      .grpStreetAddress {
+        padding: 6px 5px 0 5px;
+        width: 100%;
+        .lblStreetAddress {
+
+        }
+        .inputStreetAddress {
+          width: 230px;
+        }
+      }
+      .grpCityStateZip {
+        padding: 6px 5px 0 5px;
+        .grpCity {
+          float: left;
+          .lblCity {
+            padding: 0 3px 0 0;
+          }
+          .inputCity {
+            width: 150px;
+          }
+        }
+        .grpZip {
+          float: right;
+          .lblZip {
+            padding: 0 3px 0 0;
+          }
+          .inputZip {
+            width: 80px;
+          }
+        }
+        .grpState {
+          float: right;
+          padding: 0 10px 0 0;
+          .lblState {
+            padding: 0 3px 0 0;
+          }
+          .inputState {
+            width: 40px;
+          }
+        }
+      }
     }
-    .lblDBA {
-      width: 180px;
-      height: 12px;
+    .grpPhone {
+      padding: 6px 5px 0 5px;
+      width: 100%;
+      .lblCoPhone {
+      }
+      .inputCoPhone {
+        width: 265px;
+      }
     }
-    .inputLegalName {
-      width: 100px;
-      height: 12px;
+    .grpInception {
+      padding: 6px 5px 0 5px;
+      .lblInception {
+      }
+      .inputInception {
+        width: 265px;
+      }
     }
-    .inputDBA {
-      width: 100px;
-      height: 12px;
-    }
-    .lblTaxID {
-      width: 100px;
-      height: 12px;
-    }
-    .inputTaxID {
-      width: 100px;
-      height: 12px;
-    }
-    .lblStateOfInc {
-      width: 100px;
-      height: 12px;
-    }
-    .inputStateOfInc {
-      width: 100px;
-      height: 12px;
-    }
-    .lblCity {
-      width: 100px;
-      height: 12px;
-    }
-    .inputCity {
-      width: 100px;
-      height: 12px;
-    }
-    .lblState {
-      width: 100px;
-      height: 12px;
-    }
-    .inputState {
-      width: 100px;
-      height: 12px;
-    }
-    .lblZip {
-      width: 100px;
-      height: 12px;
-    }
-    .inputZip {
-      width: 100px;
-      height: 12px;
-    }
-    .lblCoPhone {
-      width: 100px;
-      height: 12px;
-    }
-    .inputCoPhone {
-      width: 100px;
-      height: 12px;
-    }
-    .lblInception {
-      width: 100px;
-      height: 12px;
-    }
-    .inputInception {
-      width: 100px;
-      height: 12px;
+    .grpSepBankAcct {
+      padding: 6px 5px 0 5px;
+      .lblSepBankAcct {
+        width: 180px;
+      }
+      .chkGrpSepBankAcct {
+        .grpSepBankAcctCheckNo {
+          float: right;
+          margin: 7px 30px 0 0;
+          .inputSepBankAcctNo {
+            float: right;
+            background-color: #fff !important;
+            padding: 0px !important;
+          }
+          .lblSepBankAcctNo {
+            float: right;
+          }
+        }
+        .grpSepBankAcctCheckYes {
+          float: right;
+          margin: 7px 20px 0 0;
+          .inputSepBankAcctYes {
+            float: right;
+            background-color: #fff !important;
+            padding: 0px !important;
+          }
+          .lblSepBankAcctYes {
+            float: right;
+          }
+        }
+      }
     }
   }
   .rightLegal {
-    float: left;
+    float: right;
+    width: 340px;
+    height: 230px;
+    box-sizing: border-box;
+    font-weight: bold;
+    .grpEntityOutstanding {
+      height: 80px;
+      .grpLegalEntity {
+        height: 80px;
+        float: left;
+        width: 185px;
+        padding: 3px 0 0 5px;
+        box-sizing: border-box;
+        border-right: 2px $darkblue solid;
+        .lblLegalEntity {
+          width: 100%;
+        }
+        .inputLegalEntity {
+          .grpCorpLLC {
+            float: left;
+            width: 100%;
+            padding: 4px 5px 0 0;
+            margin: 0px 0 0 -5px;
+            .grpCorp {
+              float: left;
+              .inputRadCorp {
+                float: left;
+              }
+              .lblRadCorp {
+                float: left;
+                padding: 3px 0 0 0;
+              }
+            }
+            .grpLLC {
+              float: right;
+              padding: 0 5px 0 0;
+              .inputRadLLC {
+                float: left;
+              }
+              .lblRadLLC {
+                float: left;
+                padding: 3px 0 0 0;
+                width: 22px;
+              }
+            }
+          }
+          .grpGenLLP {
+            float: left;
+            width: 100%;
+            padding: 0 5px 0 0;
+            margin: 0px 0 0 -5px;
+            .grpGenPart {
+              float: left;
+              .inputRadGenPart {
+                float: left;
+              }
+              .lblRadGenPart {
+                float: left;
+                padding: 3px 0 0 0;
+              }
+            }
+            .grpLLP {
+              float: right;
+              padding: 0 5px 0 0;
+              .inputRadLLP {
+                float: left;
+              }
+              .lblRadLLP {
+                float: left;
+                padding: 3px 0 0 0;
+                width: 22px;
+              }
+            }
+          }
+          .grpOther {
+            float: left;
+            padding: 0 5px 0 0;
+            margin: 0px 0 0 -5px;
+            .inputRadOther {
+              float: left;
+            }
+            .lblRadOther {
+              float: left;
+              padding: 3px 0 0 0;
+            }
+          }
+        }
+      }
+      .grpOutstandingCash {
+        float: left;
+        width: 153px;
+        height: 80px;
+        padding: 3px 0 0 0;
+        box-sizing: border-box;
+        .lblOutstanding {
+          width: 100%;
+          text-align: center;
+          height: 30px;
+        }
+        .chkGrpOutstanding {
+          float: left;
+          padding: 0 0 0 1px;
+          .grpOutstandingCheckNo {
+            float: left;
+            width: 100%;
+            .lblOutstandingNo {
+              float: left;
+              padding: 3px 0 0 0;
+            }
+            .inputOutstandingNo {
+              float: left;
+              background-color: #fff !important;
+            }
+          }
+          .grpOutstandingCheckYes {
+            float: left;
+            width: 100%;
+            height: 20px;
+            .lblOutstandingYes {
+              float: left;
+              padding: 3px 0 0 0;
+              width: 118px;
+              .lblOutstandingYesText {
+                float: left;
+              }
+              .inputOutstandingBalance {
+                float: right;
+                width: 59px;
+              }
+            }
+            .inputOutstandingYes {
+              float: left;
+              background-color: #fff !important;
+            }
+          }
+        }
+      }
+    }
+    .grpIndustryProperty {
+      .grpIndustry {
+        padding: 6px 5px 0 5px;
+        width: 100%;
+        .lblIndustry {
 
+        }
+        .inputIndustry {
+          width: 195px;
+        }
+      }
+      .grpRentOwn {
+        padding: 6px 5px 0 5px;
+        width: 100%;
+        .lblRentOwn {
+
+        }
+        .inputRentOwn {
+          width: 240px;
+        }
+      }
+      .grpLandlordName {
+        padding: 6px 5px 0 5px;
+        width: 100%;
+        .lblLandlordName {
+
+        }
+        .inputLandlordName {
+          width: 240px;
+        }
+      }
+      .grpLandlordPhone {
+        padding: 6px 5px 0 5px;
+        width: 100%;
+        .lblLandlordPhone {
+
+        }
+        .inputLandlordPhone {
+          width: 240px;
+        }
+      }
+      .grpCreditCards {
+        padding: 6px 5px 0 5px;
+        .lblCreditCards {
+          width: 180px;
+        }
+        .chkGrpCreditCards {
+          .grpCreditCardsCheckNo {
+            float: right;
+            margin: 7px 30px 0 0;
+            .lblCreditCardsNo {
+              float: right;
+            }
+            .inputCreditCardsNo {
+              float: right;
+              background-color: #fff !important;
+              padding: 0px !important;
+            }
+          }
+          .grpCreditCardsCheckYes {
+            float: right;
+            margin: 7px 20px 0 0;
+            .lblCreditCardsYes {
+              float: right;
+            }
+            .inputCreditCardsYes {
+              float: right;
+              background-color: #fff !important;
+              padding: 0px !important;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
 .tcLoanAmount {
   position: absolute;
-  top: 465px;
+  top: 464px;
   width: 750px;
-  height: 94px;
+  height: 92px;
+  .tcLoanAmountTitle {
+    display: block;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: $lightblue;
+    color: #fff;
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 2px solid #015B76;
+    height: 27px;
+    padding: 4px 0 0 15px;
+  }
+  .grpFinancials {
+    padding: 8px 0 0 8px;
+    text-align: center;
+    .inputBox {
+      margin: 3px 0 3px 0;
+    }
+    .financialItem {
+      width: 140px;
+      float: left;
+      margin: 0 8px 0 0;
+    }
+    .grpRevenue {
+      .lblRevenue {
+
+      }
+      .inputRevenue {
+        float: left;
+        width: 100%;
+      }
+    }
+    .grpBalance {
+      .lblBalance {
+
+      }
+      .inputBalance {
+        float: left;
+        width: 100%;
+      }
+    }
+    .grpVolume {
+      .lblVolume {
+
+      }
+      .inputVolume {
+        float: left;
+        width: 100%;
+      }
+    }
+    .grpRequested {
+      .lblRequested {
+
+      }
+      .inputRequested {
+        float: left;
+        width: 100%;
+      }
+    }
+    .grpCreditScore {
+      .lblCreditScore {
+
+      }
+      .inputCreditScore {
+        float: left;
+        width: 100%;
+      }
+    }
+  }
 }
 
 .tcOwnerInfo {
   position: absolute;
-  top: 570px;
+  top: 567px;
   width: 758px;
-  .tcoBox{
+  .tcoBox {
     width: 369px;
-    height: 363px;
+    height: 350px;
+    display: block;
+    .tcOwnerTitle {
+      display: block;
+      box-sizing: border-box;
+      font-size: 16px;
+      color: $lightblue;
+      width: 100%;
+      border-bottom: 2px solid $darkblue;
+      height: 27px;
+      padding: 5px 0 0 0;
+    }
+    .inputLabel {
+
+    }
+    .inputGroup {
+      padding: 6px 5px 0 5px;
+    }
+    .grpFirstMI {
+      .grpFirst {
+        float: left;
+        width: 240px;
+        .inputFirst {
+          width: 169px;
+        }
+      }
+      .grpMI {
+        float: right;
+        width: 70px;
+        .inputMI {
+          width: 50px;
+        }
+      }
+    }
+    .grpLast {
+      .inputLast {
+        width: 288px;
+      }
+    }
+    .grpEmail {
+      .inputEmail {
+        width: 288px;
+      }
+    }
+    .grpHomePhone {
+      .inputHomePhone {
+        width: 288px;
+      }
+    }
+    .grpCellPhone {
+      .inputCellPhone {
+        width: 288px;
+      }
+    }
+    .grpSSN {
+      .inputSSN {
+        width: 288px;
+      }
+    }
+    .grpDOB {
+      .inputDOB {
+        width: 288px;
+      }
+    }
+    .grpIncome {
+      .inputIncome {
+        width: 270px;
+      }
+    }
+    .grpHomeAddress {
+      .inputHomeAddress {
+        width: 200px;
+      }
+    }
+    .grpHomeCityState {
+      .grpHomeCity {
+        float: left;
+        width: 250px;
+        .lblHomeCity {
+          float: left;
+        }
+        .inputHomeCity {
+          float: right;
+          width: 180px;
+        }
+      }
+      .grpHomeState {
+        float: right;
+        width: 90px;
+        .lblHomeState {
+          float: left;
+        }
+        .inputHomeState {
+          float: right;
+          width: 50px;
+        }
+      }
+    }
+    .grpHomeZip {
+      .inputHomeZip {
+        width: 288px;
+      }
+    }
+    .grpOwnership {
+      .inputOwnership {
+        width: 235px;
+      }
+    }
   }
   .owner1 {
     float: left;
   }
   .owner2 {
     float: right;
+  }
+}
+
+.tcSignAndLegal {
+  position: absolute;
+  top: 930px;
+  width: 758px;
+  .signAndLegal {
+    width: 100%;
+    .legalStatement {
+      float: left;
+      width: 400px;
+      font-size: 7px;
+    }
+    .grpSignatures {
+      float: right;
+      width: 345px;
+      .grpSig {
+        float: right;
+        width: 100%;
+        height: 35px;
+        border: 4px solid $darkblue;
+        margin: 0 0 4px 0;
+        box-sizing: border-box;
+        .lblSig {
+          padding: 7px;
+        }
+      }
+    }
   }
 }

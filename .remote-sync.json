@@ -2,7 +2,7 @@
   "uploadOnSave": true,
   "useAtomicWrites": false,
   "deleteLocal": true,
-  "hostname": "192.168.0.34",
+  "hostname": "10.0.0.59",
   "port": "22",
   "ignore": [
     ".remote-sync.json",
@@ -10,8 +10,7 @@
   ],
   "username": "david",
   "watch": [],
-  "transport": "scp",
+  "transport": "ftp",
   "target": "/home/david/code/enkara/",
-  "keyfile": "C:\\DGDesign\\VM's\\id_rsa_root.ppk",
-  "passphrase": "Another1one"
+  "password": "Another1one"
 }
