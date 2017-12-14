@@ -21,7 +21,7 @@ var printPre = {
             inDataInputType: $(this).attr('data-input-type'),
             id: $(this).attr('id') ? $(this).attr('id') : '',
             name: $(this).attr('name') ? $(this).attr('name') : '',
-            value: $(this).val() ? $(this).val() : ''
+            value: $(this).text()
           }
           break;
         case 'radio':
