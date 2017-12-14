@@ -5,10 +5,11 @@ var printPre = {
   getFormData: function () {
     var objArr = [];
 
-    $('div["data-input-type="text"]').each(function() {
+    $('div[data-input-type]').each(function() {
       var obj = null;
       var inType = $(this).attr('type');
-      switch(inType) {
+      var inDataInputType = $(this).attr('data-input-type');
+      switch(inDataInputType) {
         case 'text':
         case 'time':
         case 'week':
@@ -17,6 +18,7 @@ var printPre = {
         case 'tel':
           obj = {
             inType: $(this).attr('type'),
+            inDataInputType: $(this).attr('data-input-type'),
             id: $(this).attr('id') ? $(this).attr('id') : '',
             name: $(this).attr('name') ? $(this).attr('name') : '',
             value: $(this).val() ? $(this).val() : ''
