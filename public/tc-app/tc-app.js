@@ -29,6 +29,7 @@ var printPre = {
           var inName = $(this).attr('name');
           obj = {
             inType: $(this).attr('type'),
+            inDataInputType: $(this).attr('data-input-type'),
             id: $(this).attr('id') ? $(this).attr('id') : '',
             name: $(this).attr('name') ? $(this).attr('name') : '',
             value: $('input[name=' + inName + ']:checked').val() ? $('input[name=' + inName + ']:checked').val() : ''
