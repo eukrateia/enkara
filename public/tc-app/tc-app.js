@@ -5,7 +5,7 @@ var printPre = {
   getFormData: function () {
     var objArr = [];
 
-    $('input').each(function() {
+    $('div["data-input-type="text"]').each(function() {
       var obj = null;
       var inType = $(this).attr('type');
       switch(inType) {

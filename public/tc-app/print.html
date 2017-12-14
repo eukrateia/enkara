@@ -9,6 +9,7 @@
   <meta name="author" content="Enkara TS">
 
   <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="tc-app.js"></script>
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -56,11 +57,11 @@
             <div class="dateAndUse sectionBorder">
               <div class="dateTop useLine dateLine">
                 <div class="inputLabel lblDate">Date:</div>
-                <div id="input_1_1" class="inputBox inputDate hasDatepicker datepicker_no_icon mdy" contenteditable="true"></div>
+                <div id="appDate" class="tcAppFormInput inputBox inputDate hasDatepicker datepicker_no_icon mdy" contenteditable="true"></div>
               </div>
               <div class="useOfFunds useLine">
                 <div class="inputLabel lblFunds">Use of Funds:</div>
-                <div id="input_1_1" class="inputBox inputUse" contenteditable="true"></div>
+                <div id="useOfFunds" class="tcAppFormInput inputBox inputUse" contenteditable="true"></div>
               </div>
             </div>
           </div>
@@ -72,47 +73,47 @@
                 <div class="inputLabel lblDBA">Doing Business As (DBA):</div>
               </div>
               <div class="inputGroup grpLegalInputs btmBorder">
-                <div class="inputBox inputLegalName" contenteditable="true"></div>
-                <div class="inputBox inputDBA" contenteditable="true"></div>
+                <div id="legalName" data-input-type="text" class="tcAppFormInput inputBox inputLegalName" contenteditable="true"></div>
+                <div id="dba" data-input-type="text" class="inputBox inputDBA" contenteditable="true"></div>
               </div>
               <div class="inputGroup grpTaxInfo btmBorderBig">
                 <div class="grpTaxID">
                   <div class="inputLabel lblTaxID">Tax ID:</div>
-                  <div class="inputBox inputTaxID" contenteditable="true"></div>
+                  <div id="taxID" data-input-type="text" class="inputBox inputTaxID" contenteditable="true"></div>
                 </div>
                 <div class="grpStateOfInc">
                   <div class="inputLabel lblStateOfInc">State of Incorporation:</div>
-                  <div class="inputBox inputStateOfInc" contenteditable="true"></div>
+                  <div id="stateOfInc" data-input-type="text" class="inputBox inputStateOfInc" contenteditable="true"></div>
                 </div>
               </div>
               <div class="grpAddress">
                 <div class="grpStreetAddress inputGroup btmBorder">
-                  <div class="inputLabel lblStreetAddress">Physical Address (no PO Boxes)</div>
-                  <div class="inputBox inputStreetAddress" contenteditable="true"></div>
+                  <div class="inputLabel lblStreetAddress">Physical Address (no PO Boxes):</div>
+                  <div id="coStreetAddress" data-input-type="text" class="inputBox inputStreetAddress" contenteditable="true"></div>
                 </div>
                 <div class="grpCityStateZip inputGroup btmBorder">
                   <div class="grpCity">
                     <div class="inputLabel lblCity">City:</div>
-                    <div class="inputBox inputCity" contenteditable="true"></div>
+                    <div id="coCity" data-input-type="text" class="inputBox inputCity" contenteditable="true"></div>
                   </div>
                   <div class="grpZip">
                     <div class="inputLabel lblZip">Zip Code:</div>
-                    <div class="inputBox inputZip" contenteditable="true"></div>
+                    <div id="coZip" data-input-type="text" class="inputBox inputZip" contenteditable="true"></div>
                   </div>
                   <div class="grpState">
                     <div class="inputLabel lblState">State:</div>
-                    <div class="inputBox inputState" contenteditable="true"></div>
+                    <div id="coState" data-input-type="text" class="inputBox inputState" contenteditable="true"></div>
                   </div>
                 </div>
               </div>
               <div class="grpBusinessBankInfo">
                 <div class="inputGroup grpPhone btmBorder">
                   <div class="inputLabel lblCoPhone">Company Phone:</div>
-                  <div class="inputBox inputCoPhone" contenteditable="true"></div>
+                  <div id="coPhone" data-input-type="text" class="inputBox inputCoPhone" contenteditable="true"></div>
                 </div>
                 <div class="inputGroup grpInception btmBorder">
                   <div class="inputLabel lblInception">Business Inception Date:</div>
-                  <div class="inputBox inputInception" contenteditable="true"></div>
+                  <div id="coInception" data-input-type="text" class="inputBox inputInception" contenteditable="true"></div>
                 </div>
                 <div class="inputGroup grpSepBankAcct">
                   <div class="inputLabel lblSepBankAcct">Does the merchant have a separate business bank account?</div>
@@ -120,13 +121,13 @@
                     <div class="grpSepBankAcctCheckNo">
                       <div class="inputLabel lblSepBankAcctNo">No</div>
                       <div class="inputBox inputSepBankAcctNo">
-                        <input type="radio" name="chkSepBankAcct" value="0">
+                        <input type="radio" data-input-type="radio" name="chkSepBankAcct" value="No">
                       </div>
                     </div>
                     <div class="grpSepBankAcctCheckYes">
                       <div class="inputLabel lblSepBankAcctYes">Yes</div>
                       <div class="inputBox inputSepBankAcctYes">
-                        <input type="radio" name="chkSepBankAcct" value="1">
+                        <input type="radio" data-input-type="radio" name="chkSepBankAcct" value="Yes">
                       </div>
                     </div>
                   </div>
@@ -140,26 +141,26 @@
                   <div class="inputRadio inputLegalEntity">
                     <div class="grpCorpLLC">
                       <div class="grpCorp">
-                        <div class="inputRadCorp"><input type="radio" name="radLegalEntity" value="Corporation" /></div>
+                        <div class="inputRadCorp"><input type="radio" data-input-type="radio" name="radLegalEntity" value="Corporation" /></div>
                         <div class="lblRadCorp">Corporation</div>
                       </div>
                       <div class="grpLLC">
-                        <div class="inputRadLLC"><input type="radio" name="radLegalEntity" value="LLC" /></div>
+                        <div class="inputRadLLC"><input type="radio" data-input-type="radio" name="radLegalEntity" value="LLC" /></div>
                         <div class="lblRadLLC">LLC</div>
                       </div>
                     </div>
                     <div class="grpGenLLP">
                       <div class="grpGenPart">
-                        <div class="inputRadGenPart"><input type="radio" name="radLegalEntity" value="General Partnership" /></div>
+                        <div class="inputRadGenPart"><input type="radio" data-input-type="radio" name="radLegalEntity" value="General Partnership" /></div>
                         <div class="lblRadGenPart">General Partnership</div>
                       </div>
                       <div class="grpLLP">
-                        <div class="inputRadLLP"><input type="radio" name="radLegalEntity" value="LLP" /></div>
+                        <div class="inputRadLLP"><input type="radio" data-input-type="radio" name="radLegalEntity" value="LLP" /></div>
                         <div class="lblRadLLP">LLP</div>
                       </div>
                     </div>
                     <div class="grpOther">
-                      <div class="inputRadOther"><input type="radio" name="radLegalEntity" value="Other"/></div>
+                      <div class="inputRadOther"><input type="radio" data-input-type="radio" name="radLegalEntity" value="Other"/></div>
                       <div class="lblRadOther">Other</div>
                     </div>
                   </div>
@@ -170,16 +171,16 @@
                     <div class="checkGroup chkGrpOutstanding">
                       <div class="grpOutstandingCheckYes">
                         <div class="inputBox inputOutstandingYes">
-                          <input type="radio" name="chkOutstanding" value="1">
+                          <input type="radio" data-input-type="radio" name="chkOutstanding" value="Yes">
                         </div>
                         <div class="inputLabel lblOutstandingYes">
                           <div class="lblOutstandingYesText">Yes - It's $</div>
-                          <div class="inputBox inputOutstandingBalance" contenteditable="true"></div>
+                          <div id="outstandingBalance" data-input-type="text" class="inputBox inputOutstandingBalance" contenteditable="true"></div>
                         </div>
                       </div>
                       <div class="grpOutstandingCheckNo">
                         <div class="inputBox inputOutstandingNo">
-                          <input type="radio" name="chkOutstanding" value="0">
+                          <input type="radio" data-input-type="radio" name="chkOutstanding" value="No">
                         </div>
                         <div class="inputLabel lblOutstandingNo">No</div>
                       </div>
@@ -190,19 +191,19 @@
               <div class="grpIndustryProperty">
                 <div class="inputGroup grpIndustry btmBorder">
                   <div class="inputLabel lblIndustry">Company Type/Industry:</div>
-                  <div class="inputBox inputIndustry" contenteditable="true"></div>
+                  <div id="industry" data-input-type="text" class="inputBox inputIndustry" contenteditable="true"></div>
                 </div>
                 <div class="inputGroup grpRentOwn btmBorder">
                   <div class="inputLabel lblRentOwn">Rent or own:</div>
-                  <div class="inputBox inputRentOwn" contenteditable="true"></div>
+                  <div id="rentOrOwn" data-input-type="text" class="inputBox inputRentOwn" contenteditable="true"></div>
                 </div>
                 <div class="inputGroup grpLandlordName btmBorder">
                   <div class="inputLabel lblLandlordName">Landlord Name:</div>
-                  <div class="inputBox inputLandlordName" contenteditable="true"></div>
+                  <div id="landlordName" data-input-type="text" class="inputBox inputLandlordName" contenteditable="true"></div>
                 </div>
                 <div class="inputGroup grpLandlordPhone btmBorder">
                   <div class="inputLabel lblLandlordPhone">LandlordPhone:</div>
-                  <div class="inputBox inputLandlordPhone" contenteditable="true"></div>
+                  <div id="landlordPhone" data-input-type="text" class="inputBox inputLandlordPhone" contenteditable="true"></div>
                 </div>
                 <div class="inputGroup grpCreditCards">
                   <div class="inputLabel lblCreditCards">Has the merchant accepted credit cards for at least 4 months?</div>
@@ -210,13 +211,13 @@
                     <div class="grpCreditCardsCheckNo">
                       <div class="inputLabel lblCreditCardsNo">No</div>
                       <div class="inputBox inputCreditCardsNo">
-                        <input type="radio" name="chkCreditCards" value="0">
+                        <input type="radio" data-input-type="radio" name="chkCreditCards" value="No">
                       </div>
                     </div>
                     <div class="grpCreditCardsCheckYes">
                       <div class="inputLabel lblCreditCardsYes">Yes</div>
                       <div class="inputBox inputCreditCardsYes">
-                        <input type="radio" name="chkCreditCards" value="1">
+                        <input type="radio" data-input-type="radio" name="chkCreditCards" value="yes">
                       </div>
                     </div>
                   </div>
@@ -231,31 +232,31 @@
                 <div class="lblRevenue btmBorderBlack">
                   Annual Business Revenue
                 </div>
-                <div class="inputBox inputRevenue" contenteditable="true"></div>
+                <div id="businessRevenue" data-input-type="text" class="inputBox inputRevenue" contenteditable="true"></div>
               </div>
               <div class="grpBalance btmBorderBlack financialItem">
                 <div class="lblBalance btmBorderBlack">
                   Average Bank Balance
                 </div>
-                <div class="inputBox inputBalance" contenteditable="true"></div>
+                <div id="avgBankBalance" data-input-type="text" class="inputBox inputBalance" contenteditable="true"></div>
               </div>
               <div class="grpVolume btmBorderBlack financialItem">
                 <div class="lblVolume btmBorderBlack">
                   Monthly Credit Card Volume
                 </div>
-                <div class="inputBox inputVolume" contenteditable="true"></div>
+                <div id="ccVolume" data-input-type="text" class="inputBox inputVolume" contenteditable="true"></div>
               </div>
               <div class="grpRequested btmBorderBlack financialItem">
                 <div class="lblRequested btmBorderBlack">
                   Loan Amount Requested
                 </div>
-                <div class="inputBox inputRequested" contenteditable="true"></div>
+                <div id="amountRequested" data-input-type="text" class="inputBox inputRequested" contenteditable="true"></div>
               </div>
               <div class="grpCreditScore btmBorderBlack financialItem">
                 <div class="lblCreditScore btmBorderBlack">
                   Credit Score
                 </div>
-                <div class="inputBox inputCreditScore" contenteditable="true"></div>
+                <div id="creditScore" data-input-type="text" class="inputBox inputCreditScore" contenteditable="true"></div>
               </div>
             </div>
           </div>
@@ -263,67 +264,67 @@
             <div class="owner1 tcoBox sectionBorder">
               <div class="tcOwnerTitle">
                 <div class="greaterThan">&gt;</div>
-                OWNER INFORMATION 1
+                OWNER INFORMATION
               </div>
               <div class="inputGroup grpFirstMI btmBorder">
                 <div class="grpFirst">
                   <div class="inputLabel lblFirst">First name:</div>
-                  <div class="inputBox inputFirst" contenteditable="true"></div>
+                  <div id="owner1First" data-input-type="text" class="inputBox inputFirst" contenteditable="true"></div>
                 </div>
                 <div class="grpMI">
                   <div class="inputLabel lblMI">MI:</div>
-                  <div class="inputBox inputMI" contenteditable="true"></div>
+                  <div id="owner1MI" data-input-type="text" class="inputBox inputMI" contenteditable="true"></div>
                 </div>
               </div>
               <div class="inputGroup grpLast btmBorder">
                 <div class="inputLabel lblLast">Last name:</div>
-                <div class="inputBox inputLast" contenteditable="true"></div>
+                <div id="owner1Last" data-input-type="text" class="inputBox inputLast" contenteditable="true"></div>
               </div>
               <div class="inputGroup grpEmail btmBorder">
                 <div class="inputLabel lblEmail">Email:</div>
-                <div class="inputBox inputEmail" contenteditable="true"></div>
+                <div id="owner1Email" data-input-type="text" class="inputBox inputEmail" contenteditable="true"></div>
               </div>
               <div class="inputGroup grpHomePhone btmBorder">
                 <div class="inputLabel lblHomePhone">Home Phone:</div>
-                <div class="inputBox inputHomePhone" contenteditable="true"></div>
+                <div id="owner1HomePhone" data-input-type="text" class="inputBox inputHomePhone" contenteditable="true"></div>
               </div>
               <div class="inputGroup grpCellPhone btmBorder">
                 <div class="inputLabel lblCellPhone">Cell Phone:</div>
-                <div class="inputBox inputCellPhone" contenteditable="true"></div>
+                <div id="owner1CellPhone" data-input-type="text" class="inputBox inputCellPhone" contenteditable="true"></div>
               </div>
               <div class="inputGroup grpSSN btmBorder">
                 <div class="inputLabel lblSSN">SS number:</div>
-                <div class="inputBox inputSSN" contenteditable="true"></div>
+                <div id="owner1SSN" data-input-type="text" class="inputBox inputSSN" contenteditable="true"></div>
               </div>
               <div class="inputGroup grpDOB btmBorderBig">
                 <div class="inputLabel lblDOB">Date of birth:</div>
-                <div class="inputBox inputDOB" contenteditable="true"></div>
+                <div id="owner1DOB" data-input-type="text" class="inputBox inputDOB" contenteditable="true"></div>
               </div>
               <div class="inputGroup grpIncome btmBorder">
                 <div class="inputLabel lblIncome">Annual Income:</div>
-                <div class="inputBox inputIncome" contenteditable="true"></div>
+                <div id="owner1Income" data-input-type="text" class="inputBox inputIncome" contenteditable="true"></div>
               </div>
               <div class="inputGroup grpHomeAddress btmBorder">
                 <div class="inputLabel lblHomeAddress">Home address (no PO Boxes):</div>
-                <div class="inputBox inputHomeAddress" contenteditable="true"></div>
+                <div id="owner1HomeAddress" data-input-type="text" class="inputBox inputHomeAddress" contenteditable="true"></div>
               </div>
               <div class="inputGroup grpHomeCityState btmBorder">
                 <div class="grpHomeCity">
                   <div class="inputLabel lblHomeCity">City:</div>
-                  <div class="inputBox inputHomeCity" contenteditable="true"></div>
+                  <div id="owner1HomeCity" data-input-type="text" class="inputBox inputHomeCity" contenteditable="true"></div>
                 </div>
                 <div class="grpHomeState">
                   <div class="inputLabel lblHomeState">State:</div>
-                  <div class="inputBox inputHomeState" contenteditable="true"></div>
+                  <div id="owner1HomeState" data-input-type="text" class="inputBox inputHomeState" contenteditable="true"></div>
                 </div>
               </div>
               <div class="inputGroup grpHomeZip btmBorder">
                 <div class="inputLabel lblHomeZip">Zip Code:</div>
-                <div class="inputBox inputHomeZip" contenteditable="true"></div>
+                <div id="owner1HomeZip" data-input-type="text" class="inputBox inputHomeZip" contenteditable="true"></div>
               </div>
               <div class="inputGroup grpOwnership">
                 <div class="inputLabel lblOwnership">Business Ownership %:</div>
-                <div class="inputBox inputOwnership" contenteditable="true"></div>
+                <div id="owner1Ownership" data-input-type="text" class="inputBox inputOwnership" contenteditable="true"></div>
               </div>
             </div>
             <div class="owner2 tcoBox sectionBorder">
@@ -334,62 +335,62 @@
               <div class="inputGroup grpFirstMI btmBorder">
                 <div class="grpFirst">
                   <div class="inputLabel lblFirst">First name:</div>
-                  <div class="inputBox inputFirst" contenteditable="true"></div>
+                  <div id="owner2First" data-input-type="text" class="inputBox inputFirst" contenteditable="true"></div>
                 </div>
                 <div class="grpMI">
                   <div class="inputLabel lblMI">MI:</div>
-                  <div class="inputBox inputMI" contenteditable="true"></div>
+                  <div id="owner2MI" data-input-type="text" class="inputBox inputMI" contenteditable="true"></div>
                 </div>
               </div>
               <div class="inputGroup grpLast btmBorder">
                 <div class="inputLabel lblLast">Last name:</div>
-                <div class="inputBox inputLast" contenteditable="true"></div>
+                <div id="owner2Last" data-input-type="text" class="inputBox inputLast" contenteditable="true"></div>
               </div>
               <div class="inputGroup grpEmail btmBorder">
                 <div class="inputLabel lblEmail">Email:</div>
-                <div class="inputBox inputEmail" contenteditable="true"></div>
+                <div id="owner2Email" data-input-type="text" class="inputBox inputEmail" contenteditable="true"></div>
               </div>
               <div class="inputGroup grpHomePhone btmBorder">
                 <div class="inputLabel lblHomePhone">Home Phone:</div>
-                <div class="inputBox inputHomePhone" contenteditable="true"></div>
+                <div id="owner2HomePhone" data-input-type="text" class="inputBox inputHomePhone" contenteditable="true"></div>
               </div>
               <div class="inputGroup grpCellPhone btmBorder">
                 <div class="inputLabel lblCellPhone">Cell Phone:</div>
-                <div class="inputBox inputCellPhone" contenteditable="true"></div>
+                <div id="owner2CellPhone" data-input-type="text" class="inputBox inputCellPhone" contenteditable="true"></div>
               </div>
               <div class="inputGroup grpSSN btmBorder">
                 <div class="inputLabel lblSSN">SS number:</div>
-                <div class="inputBox inputSSN" contenteditable="true"></div>
+                <div id="owner2SSN" data-input-type="text" class="inputBox inputSSN" contenteditable="true"></div>
               </div>
               <div class="inputGroup grpDOB btmBorderBig">
                 <div class="inputLabel lblDOB">Date of birth:</div>
-                <div class="inputBox inputDOB" contenteditable="true"></div>
+                <div id="owner2DOB" data-input-type="text" class="inputBox inputDOB" contenteditable="true"></div>
               </div>
               <div class="inputGroup grpIncome btmBorder">
                 <div class="inputLabel lblIncome">Annual Income:</div>
-                <div class="inputBox inputIncome" contenteditable="true"></div>
+                <div id="owner2Income" data-input-type="text" class="inputBox inputIncome" contenteditable="true"></div>
               </div>
               <div class="inputGroup grpHomeAddress btmBorder">
                 <div class="inputLabel lblHomeAddress">Home address (no PO Boxes):</div>
-                <div class="inputBox inputHomeAddress" contenteditable="true"></div>
+                <div id="owner2HomeAddress" data-input-type="text" class="inputBox inputHomeAddress" contenteditable="true"></div>
               </div>
               <div class="inputGroup grpHomeCityState btmBorder">
                 <div class="grpHomeCity">
                   <div class="inputLabel lblHomeCity">City:</div>
-                  <div class="inputBox inputHomeCity" contenteditable="true"></div>
+                  <div id="owner2HomeCity" data-input-type="text" class="inputBox inputHomeCity" contenteditable="true"></div>
                 </div>
                 <div class="grpHomeState">
                   <div class="inputLabel lblHomeState">State:</div>
-                  <div class="inputBox inputHomeState" contenteditable="true"></div>
+                  <div id="owner2HomeState" data-input-type="text" class="inputBox inputHomeState" contenteditable="true"></div>
                 </div>
               </div>
               <div class="inputGroup grpHomeZip btmBorder">
                 <div class="inputLabel lblHomeZip">Zip Code:</div>
-                <div class="inputBox inputHomeZip" contenteditable="true"></div>
+                <div id="owner2HomeZip" data-input-type="text" class="inputBox inputHomeZip" contenteditable="true"></div>
               </div>
               <div class="inputGroup grpOwnership">
                 <div class="inputLabel lblOwnership">Business Ownership %:</div>
-                <div class="inputBox inputOwnership" contenteditable="true"></div>
+                <div id="owner2Ownership" data-input-type="text" class="inputBox inputOwnership" contenteditable="true"></div>
               </div>
             </div>
           </div>
@@ -401,11 +402,11 @@
               <div class="grpSignatures">
                 <div class="grpSig">
                   <div class="lblSig">Signature (1):*</div>
-                  <div class="inputSignature"></div>
+                  <div id="owner2Signature" data-input-type="encrypted" class="inputSignature"></div>
                 </div>
                 <div class="grpSig">
                   <div class="lblSig">Signature (2):*</div>
-                  <div class="inputSignature"></div>
+                  <div id="owner2Signature"  data-input-type="encrypted" class="inputSignature"></div>
                 </div>
               </div>
             </div>
