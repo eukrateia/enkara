@@ -8,6 +8,9 @@ var printPre = {
     $('[data-input-type]').each(function() {
       var inDataInputType = $(this).attr('data-input-type');
       var zid = $(this).attr('zid');
+      if (zid == undefined || zid == null || or zid == '') {
+        console.log('***************************** ' + $(this).attr('id') + ': NO ZID!!!')
+      }
       switch(inDataInputType) {
         case 'text':
         case 'time':
