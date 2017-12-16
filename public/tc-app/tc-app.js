@@ -8,9 +8,7 @@ var printPre = {
     $('[data-input-type]').each(function() {
       var inDataInputType = $(this).attr('data-input-type');
       var zid = $(this).attr('zid');
-      if (zid == undefined || zid == null || zid == '') {
-        console.log('***************************** ' + $(this).attr('id') + ': NO ZID!!!')
-      }
+      console.log('***************************** ' + $(this).attr('id') + ': NO ZID!!!');
       switch(inDataInputType) {
         case 'text':
         case 'time':
@@ -23,8 +21,8 @@ var printPre = {
         case 'radio':
           var inName = $(this).attr('name');
           objArr[zid] = $('input[name="' + inName + '"]:checked').val();
-          console.log('inDataInputType: ' + inDataInputType + '   zid: ' + zid + '   inName: ' + inName);
-          console.log('input[name="' + inName + '"] = ' + $('input[name="' + inName + '"]:checked').val());
+          //console.log('inDataInputType: ' + inDataInputType + '   zid: ' + zid + '   inName: ' + inName);
+          //console.log('input[name="' + inName + '"] = ' + $('input[name="' + inName + '"]:checked').val());
           break;
         case 'checkbox':
           var inName = $(this).attr('name');
