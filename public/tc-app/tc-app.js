@@ -28,9 +28,6 @@ var printPre = {
         default:
           break;
       }
-      if(obj !== null) {
-        objArr.push(obj);
-      }
     });
     console.log(objArr);
   }
