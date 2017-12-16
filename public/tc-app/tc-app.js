@@ -2,39 +2,43 @@ var printPre = {
   init: {
 
   },
-  getFormData: function () {
-    var objArr = [];
-
-    $('[data-input-type]').each(function() {
-      var inDataInputType = $(this).attr('data-input-type');
-      var zid = $(this).attr('zid');
-      if (inDataInputType != 'radio') { console.log('***************************** ' + $(this).attr('id') + ': ' + zid); }
-      switch(inDataInputType) {
-        case 'text':
-        case 'time':
-        case 'week':
-        case 'month':
-        case 'number':
-        case 'tel':
-          objArr[zid] = $(this).text();
-          break;
-        case 'radio':
-          var inName = $(this).attr('name');
-          objArr[zid] = $('input[name="' + inName + '"]:checked').val();
-          //console.log('inDataInputType: ' + inDataInputType + '   zid: ' + zid + '   inName: ' + inName);
-          //console.log('input[name="' + inName + '"] = ' + $('input[name="' + inName + '"]:checked').val());
-          break;
-        case 'checkbox':
-          var inName = $(this).attr('name');
-          objArr[zid] = $(this).val();
-          break;
-        case 'encrypted':
-        default:
-          break;
-      }
-    });
-    console.log(objArr);
+  submit: function () {
+    getFormData();
   }
+}
+
+function getFormData() {
+  var objArr = [];
+
+  $('[data-input-type]').each(function() {
+    var inDataInputType = $(this).attr('data-input-type');
+    var zid = $(this).attr('zid');
+    //if (inDataInputType != 'radio') { console.log('***************************** ' + $(this).attr('id') + ': ' + zid); }
+    switch(inDataInputType) {
+      case 'text':
+      case 'time':
+      case 'week':
+      case 'month':
+      case 'number':
+      case 'tel':
+        objArr[zid] = $(this).text();
+        break;
+      case 'radio':
+        var inName = $(this).attr('name');
+        objArr[zid] = $('input[name="' + inName + '"]:checked').val();
+        break;
+      case 'checkbox':
+        var inName = $(this).attr('name');
+        objArr[zid] = $(this).val();
+        break;
+      case 'encrypted':
+      default:
+        break;
+    }
+  });
+  console.log(objArr);
+
+
 }
 
 
