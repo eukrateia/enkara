@@ -20,6 +20,8 @@ var printPre = {
         case 'radio':
           var inName = $(this).attr('name');
           objArr[zid] = $('input[name="' + inName + '"]').val();
+          console.log('inDataInputType: ' + inDataInputType + '   zid: ' + zid + '   inName: ' + inName);
+          console.log('input[name="' + inName + '"] = ' + $('input[name="' + inName + '"]').val());
           break;
         case 'checkbox':
           var inName = $(this).attr('name');
