@@ -8,7 +8,7 @@ var printPre = {
     $('[data-input-type]').each(function() {
       var inDataInputType = $(this).attr('data-input-type');
       var zid = $(this).attr('zid');
-      console.log('***************************** ' + $(this).attr('id') + ': NO ZID!!!');
+      if (inDataInputType != 'radio') { console.log('***************************** ' + $(this).attr('id') + ': NO ZID!!!'); }
       switch(inDataInputType) {
         case 'text':
         case 'time':
