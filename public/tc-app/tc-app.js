@@ -30,6 +30,7 @@ var printPre = {
           var inName = $(this).attr('name');
           objArr[zid] = $(this).val();
           break;
+        case 'encrypted':
         default:
           break;
       }
