@@ -19,9 +19,9 @@ var printPre = {
           break;
         case 'radio':
           var inName = $(this).attr('name');
-          objArr[zid] = $('input[name="' + inName + '"]').val();
+          objArr[zid] = $('input[name="' + inName + '"]:checked').val();
           console.log('inDataInputType: ' + inDataInputType + '   zid: ' + zid + '   inName: ' + inName);
-          console.log('input[name="' + inName + '"] = ' + $('input[name="' + inName + '"]').val());
+          console.log('input[name="' + inName + '"] = ' + $('input[name="' + inName + '"]:checked').val());
           break;
         case 'checkbox':
           var inName = $(this).attr('name');
