@@ -4,7 +4,7 @@ var testData = {
 
 
 var printPre = {
-  init: {
+  init: function() {
     printPre.setDefaults();
     printPre.events.buttons();
   },
