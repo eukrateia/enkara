@@ -2723,6 +2723,26 @@ html, body {
   .inputBox {
     padding: 0px !important; } }
 
+.btn {
+  padding: 5px 10px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  line-height: 17px; }
+  .btn.green {
+    background-color: #508C50 !important; }
+    .btn.green:hover {
+      background-color: #206020 !important;
+      cursor: pointer; }
+  .btn.blue {
+    background-color: #0D87E5 !important; }
+    .btn.blue:hover {
+      background-color: #0570C2 !important;
+      cursor: pointer; }
+
 .bodyContent .printablePreview {
   background-size: 8.5in;
   background-repeat: no-repeat;
