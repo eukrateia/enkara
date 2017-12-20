@@ -19,7 +19,7 @@ var printPre = {
       });
 
     }
-  }.
+  },
   submit: {
     getFormData: function() {
       var objArr = [];
