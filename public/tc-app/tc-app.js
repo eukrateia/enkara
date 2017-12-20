@@ -116,7 +116,7 @@ var printPre = {
 
       var dataStr = 'https://crm.zoho.com/crm/private/xml/Leads/insertRecords?newFormat=1&authtoken=a5645229e18b49eb2927c290aeed90ac&scope=crmapi&xmlData=<Leads><row no="1">';
       for (var field in objArr) {
-        dataStr += '<FL val="' + field + '">' + objArr[field] + '</FL>';
+        dataStr += '<FL val="' + field + '">' + (objArr[field] == undefined ? '' : objArr[field]) + '</FL>';
       }
       dataStr += '</row></Leads>';
       console.log('*****************************');
