@@ -3309,3 +3309,11 @@ html, body {
         box-sizing: border-box; }
         .tcSignAndLegal .signAndLegal .grpSignatures .grpSig .lblSig {
           padding: 7px; }
+
+.submitBtn {
+  position: relative;
+  float: left;
+  top: 940px;
+  width: 738px;
+  text-align: center;
+  margin-bottom: 100px; }
