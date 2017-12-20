@@ -1,5 +1,57 @@
 var testData = {
-
+  "Accepted CC for at least 4 months" : "Yes",
+"Annual Income 1":"10000",
+"Annual Income 2":"20000",
+"Annual Revenue":"150000",
+"Average Bank Balance":"40500",
+"Business Inception":"12/1/20120",
+"Business Ownership % 1":"",
+"Business Ownership % 2":"",
+"Cell Phone 1":"",
+"City":"Dover",
+"City 1":"",
+"City 2":"",
+"Company":"Enkara Technology Solutions",
+"Company Type":"LLC",
+"Credit Score":"760",
+"Date of Birth 1":"",
+"Date of Birth 2":"",
+"Date/Time (First Call)":"12/19/2017",
+"Doing Business As (DBA)":"",
+"Email 1":"dave.demers@gmail.com",
+"Email 2":"",
+"First Name 1":"David",
+"First Name 2":"",
+"Home Address 1":"",
+"Home Address 2":"",
+"Home Phone 1":"603-325-2910",
+"Home Phone 2":"",
+"Landlord Name":"",
+"Landlord Phone":"",
+"Last Name 1":"Demers",
+"Last Name 2":"",
+"Legal Entity":"",
+"Loan Amount Requested":"",
+"MCA Amount":"",
+"Middle Initial 1":"",
+"Middle Initial 2":"",
+"Monthly Credit Card Volume":"",
+"Outstanding MCA":"No",
+"Phone":"",
+"Rent or Own":"",
+"SSN 1":"",
+"SSN 2":"",
+"Separate Business Bank Account":"No",
+"State":"NH",
+"State 1":"",
+"State 2":"",
+"State of Incorporation":"NH",
+"Street":"130 Central Ave",
+"Tax ID":"",
+"Use of Funds":"Fun Money!",
+"Zip 1":"",
+"Zip 2":"",
+"Zip Code":"03820"
 }
 
 
@@ -50,7 +102,7 @@ var printPre = {
         }
       });
       console.log(objArr);
-      printPre.submit.postData(objArr);
+      printPre.submit.xmlBuild(objArr);
     },
     validateInput: function(objArr) {
 
