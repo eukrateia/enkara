@@ -7,7 +7,7 @@ var testData = {
   "Business Inception"                : "12/1/20120",
   "Business Ownership Percent 1"      : "80",
   "Business Ownership Percent 2"      : "20",
-  "Cell Phone 1"                      : "603-325-2910"
+  "Cell Phone 1"                      : "603-325-2910",
   "Cell Phone 2"                      : "603-325-2910",
   "City"                              : "Dover",
   "City 1"                            : "Rochester",
