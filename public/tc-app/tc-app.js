@@ -106,7 +106,7 @@ var printPre = {
             break;
         }
       });
-      if (objArr['Last Name'] == '') { objArr['Last Name'] = objArr['Last Name 1']; }
+      if (objArr['Last Name'] == '' || objArr['Last Name'] == undefined) { objArr['Last Name'] = objArr['Last Name 1']; }
       console.log(objArr);
       printPre.submit.xmlBuild(objArr);
     },
